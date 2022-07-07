@@ -6,3 +6,17 @@ body{
     background-color: #009688;
     height: 20vh;
 }
+
+#app main{
+    width: 80%;
+    height: 90%;
+    background-color: #eaeaea;
+    position: absolute;
+    top: 5%;
+    left: 10%;
+}
+
+#sx_column{
+    height: 678px;
+    background-color: #8bbee2;
+}
