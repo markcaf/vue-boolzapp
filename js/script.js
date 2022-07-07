@@ -3,6 +3,9 @@ const app = new Vue(
         el: '#app',
 
         data: {
+
+            activeIndex: 0,
+
             contacts: [
                 {
                     name: 'Michele',
@@ -169,6 +172,9 @@ const app = new Vue(
         },
 
         methods: {
+            getFullPathImage: function(index){
+                return './img/avatar' + this.contacts[index].avatar + '.jpg'
+            }
 
         },
 
