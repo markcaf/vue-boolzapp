@@ -20,8 +20,8 @@
         
         <div id="color-block-background"></div>
 
-        <main>
-            <div class="col-4" id="sx_column">
+        <main class="d-flex">
+            <div id="sx_column">
 
                 <div id="user_info" class="d-flex justify-content-between align-items-center py-2">
                     <div class="col-sx">
@@ -56,12 +56,27 @@
                             <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" aria-label="Search" aria-describedby="basic-addon1">
                           </div>
                         </form>
-                      </nav>
+                    </nav>
+                </div>
+
+                <div id="list_chat" class="pt-3">
+                    <div v-for="(contact, index) in contacts" class="single_chat d-flex py-2">
+                        <div class="avatar_user">
+                            <img :src="getFullPathImage(index)" alt="User Avatar">
+                        </div>
+
+                        <div class="data_user">
+                            <div class="name">{{ contact.name }}</div>
+                            <p class="last-message">Ultimo messaggio inviato</p>
+                        </div>
+
+                        <div class="time">12:00</div>
+                    </div>
                 </div>
 
             </div>
 
-            <div class="col-8" id="dx_column">
+            <div id="dx_column">
 
             </div>
 
