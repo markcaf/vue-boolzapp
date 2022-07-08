@@ -180,6 +180,34 @@ body{
     background-image: url(../img/mine.jpg);
 }
 
+#chat_wrapper .wrapper_messages{
+    width: 80%;
+    margin: 0 auto;
+}
+
+#chat_wrapper .user_message{
+    background-color: #d5f9ba;
+    padding: 10px;
+    border-radius: 10px;
+    align-self: flex-end;
+    margin-bottom: 10px;
+    width: 45%;
+}
+
+#chat_wrapper .chat_message{
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    align-self: flex-start;
+    margin-bottom: 10px;
+    width: 45%;
+}
+
+#chat_wrapper .time{
+    position: relative;
+    top: 15px;
+}
+
 
 /* Bottom con input per invio messaggi */
 #chat_bottom{
