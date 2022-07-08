@@ -91,10 +91,10 @@
                 <div id="chat_info" class="d-flex justify-content-between align-items-center py-2">
                     <div class="col-sx d-flex align-items-center">
                         <div class="avatar_user">
-                            <img src="./img/avatar_1.jpg" alt="User Avatar">
+                            <img :src="getFullPathImage(activeIndex)" alt="User Avatar">
                         </div>
                         <div class="user_text">
-                            <div class="name_user">Nome</div>
+                            <div class="name_user">{{contacts[activeIndex].name}}</div>
                             <div class="last_access">Ultimo accesso oggi alle 12:00</div>
                         </div>
                     </div>
