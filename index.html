@@ -49,7 +49,7 @@
                 </div>
 
                 <div id="search_chat">
-                    <nav class="navbar navbar-light bg-light">
+                    <nav class="navbar navbar-light">
                         <form class="container-fluid">
                           <div class="input-group">
                             <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-magnifying-glass"></i></span>
@@ -59,7 +59,7 @@
                     </nav>
                 </div>
 
-                <div id="list_chat" class="pt-3">
+                <div id="list_chat" class="pt-2">
                     <div v-for="(contact, index) in contacts" class="single_chat d-flex py-2">
                         <div class="avatar_user">
                             <img :src="getFullPathImage(index)" alt="User Avatar">
@@ -77,6 +77,23 @@
             </div>
 
             <div id="dx_column">
+
+                <div id="chat_info" class="d-flex justify-content-between align-items-center py-2">
+                    <div class="col-sx d-flex align-items-center">
+                        <div class="avatar_user">
+                            <img src="./img/avatar_1.jpg" alt="User Avatar">
+                        </div>
+                        <div class="user_text">
+                            <div class="name_user">Michele</div>
+                            <div class="last_access">Ultimo accesso oggi alle 12:00</div>
+                        </div>
+                    </div>
+                    <div class="col-dx">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-paperclip"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
 
             </div>
 
