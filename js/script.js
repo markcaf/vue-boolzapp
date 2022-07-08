@@ -177,7 +177,11 @@ const app = new Vue(
             },
 
             setActiveIndex(newIndex){
+                // this.contacts.visible = false;
                 this.activeIndex = newIndex;
+                // if ( this.contacts[this.activeIndex].visible == false ){
+                //     this.contacts[this.activeIndex].visible = true;
+                // }
             },
 
         },
