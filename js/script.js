@@ -6,6 +6,8 @@ const app = new Vue(
 
             activeIndex: 0,
 
+            newMessage: "",
+
             contacts: [
                 {
                     name: 'Michele',
@@ -179,6 +181,21 @@ const app = new Vue(
             setActiveIndex(newIndex){
                 this.activeIndex = newIndex;
             },
+
+            addToChat: function (currentMessage) {
+                if (currentMessage == ""){
+                    console.warn('Attenzione, stai inserendo un elemento vuoto');
+                } else {
+                    this.contacts[this.activeIndex].messages.push(
+                        {
+                            date: '08/07/2022 18:00:00',
+                            message: currentMessage,
+                            status: 'sent'
+                        }
+                    );
+                    this.newMessage = '';
+                }
+            }
 
         },
 
