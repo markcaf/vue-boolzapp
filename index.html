@@ -134,7 +134,7 @@
                     </div>
 
                     <div class="send_message">
-                        <input type="text" class="form-control" placeholder="Scrivi un messaggio">
+                        <input type="text" class="form-control" placeholder="Scrivi un messaggio" v-model.trim="newMessage" @keyUp.enter="addToChat(newMessage)">
                     </div>
 
                     <div class="vocal_message d-flex justify-content-center">
