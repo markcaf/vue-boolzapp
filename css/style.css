@@ -106,7 +106,6 @@ body{
 
 /* Lista chat */
 #list_chat{
-    padding: 0 15px;
     background-color: white;
     height: 500px;
     overflow-y: scroll;
@@ -133,12 +132,17 @@ body{
 
 #list_chat .single_chat{
     position: relative;
+    cursor: pointer;
 }
 
 #list_chat .single_chat .time{
     position: absolute;
     top: 10px;
-    right: 0px;
+    right: 10px;
+}
+
+#list_chat .single_chat.active_chat{
+    background-color: #e9ebeb;
 }
 
 
