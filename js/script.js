@@ -174,7 +174,11 @@ const app = new Vue(
         methods: {
             getFullPathImage: function(index){
                 return './img/avatar' + this.contacts[index].avatar + '.jpg'
-            }
+            },
+
+            setActiveIndex(newIndex){
+                this.activeIndex = newIndex;
+            },
 
         },
 
