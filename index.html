@@ -16,13 +16,18 @@
 
 <body>
 
+    <!-- Inizio dell'area del DOM collegata all'istanza di Vue.js -->
     <div id="app">
         
         <div id="color-block-background"></div>
 
+        <!-- Wrapper della web app -->
         <main class="d-flex">
+
+            <!-- Wrapper della colonna sinistra con info utente, notifiche, ricerca e lista contatti -->
             <div id="sx_column">
 
+                <!-- Info utente che utilizza la web app -->
                 <div id="user_info" class="d-flex justify-content-between align-items-center py-2">
                     <div class="col-sx">
                         <div class="avatar_user">
@@ -36,7 +41,8 @@
                         <i class="fa-solid fa-ellipsis-vertical"></i>
                     </div>
                 </div>
-
+                
+                <!-- Notifiche -->
                 <div id="notifications" class="d-flex align-items-center py-3">
                     <div class="mute_icon d-flex justify-content-center align-items-center">
                         <i class="fa-solid fa-bell-slash"></i>
@@ -48,6 +54,7 @@
                     </div>
                 </div>
 
+                <!-- Ricerca chat dalla lista -->
                 <div id="search_chat">
                     <nav class="navbar navbar-light">
                         <form class="container-fluid">
@@ -59,6 +66,7 @@
                     </nav>
                 </div>
 
+                <!-- Lista chat dinamica in Vue.js -->
                 <div id="list_chat" class="pt-2">
                     <div v-for="(contact, index) in contacts" class="single_chat d-flex py-2">
                         <div class="avatar_user">
@@ -75,9 +83,11 @@
                 </div>
 
             </div>
-
+            
+            <!-- Wrapper della colonna destra con info dell'utente in chat, schermata della chat e bottom con invio messaggio -->
             <div id="dx_column">
 
+                <!-- Info utente chat attiva -->
                 <div id="chat_info" class="d-flex justify-content-between align-items-center py-2">
                     <div class="col-sx d-flex align-items-center">
                         <div class="avatar_user">
@@ -95,10 +105,12 @@
                     </div>
                 </div>
 
+                <!-- Schermata chat con messaggi -->
                 <div id="chat_wrapper">
 
                 </div>
 
+                <!-- Bottom con input per invio messaggi -->
                 <div id="chat_bottom" class="d-flex justify-content-between align-items-center">
                     <div class="emoticons d-flex justify-content-center">
                         <i class="fa-regular fa-face-smile"></i>
@@ -116,8 +128,10 @@
             </div>
 
         </main>
+        <!-- Fine wrapper della web app -->
 
     </div>
+    <!-- Fine dell'area del DOM collegata all'istanza di Vue.js -->
 
 
     <!-- Script -->
