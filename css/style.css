@@ -161,3 +161,17 @@ body{
     height: 565px;
     background-image: url(../img/mine.jpg);
 }
+
+#chat_bottom{
+    height: 55px;
+}
+
+#chat_bottom .send_message{
+    width: 80%;
+}
+
+#chat_bottom .emoticons,.vocal_message{
+    width: 10%;
+    font-size: 20px;
+    color: #6b7376;
+}
