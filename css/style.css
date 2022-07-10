@@ -182,6 +182,7 @@ body{
 #chat_wrapper{
     height: 565px;
     background-image: url(../img/mine.jpg);
+    overflow: auto;
 }
 
 #chat_wrapper .wrapper_messages{
