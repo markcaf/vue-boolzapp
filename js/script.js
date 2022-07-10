@@ -8,6 +8,8 @@ const app = new Vue(
 
             newMessage: "",
 
+            newReceivedMessage: 'Ok!',
+
             contacts: [
                 {
                     name: 'Michele',
@@ -194,6 +196,16 @@ const app = new Vue(
                         }
                     );
                     this.newMessage = '';
+
+                    setTimeout(()=>{
+                        this.contacts[this.activeIndex].messages.push(
+                            {
+                                date: '08/07/2022 18:00:03',
+                                message: this.newReceivedMessage,
+                                status : 'received'
+                            }
+                        )
+                    }, 3000);
                 }
             }
 
