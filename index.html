@@ -75,7 +75,7 @@
 
                         <div class="data_user">
                             <div class="name">{{ contact.name }}</div>
-                            <p class="last-message">Ultimo messaggio inviato</p>
+                            <p class="last-message">{{ contact.messages[contact.messages.length - 1].message }}</p>
                         </div>
 
                         <div class="time">12:00</div>
