@@ -10,6 +10,8 @@ const app = new Vue(
 
             newReceivedMessage: 'Ok!',
 
+            searchBar: "",
+
             contacts: [
                 {
                     name: 'Michele',
@@ -207,8 +209,14 @@ const app = new Vue(
                         )
                     }, 3000);
                 }
-            }
+            },
 
+            filteredList: function (index){
+                let contactName = this.contacts[index].name.toLowerCase();
+                let nameSearched = this.searchBar.toLowerCase();
+                return (contactName.startsWith(nameSearched));
+            },
+            
         },
 
         created() {

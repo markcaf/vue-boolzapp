@@ -60,7 +60,7 @@
                         <form class="container-fluid">
                           <div class="input-group">
                             <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-magnifying-glass"></i></span>
-                            <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" aria-label="Search" aria-describedby="basic-addon1">
+                            <input type="text" v-model="searchBar" class="form-control" placeholder="Cerca o inizia una nuova chat" aria-label="Search" aria-describedby="basic-addon1">
                           </div>
                         </form>
                     </nav>
@@ -68,7 +68,7 @@
 
                 <!-- Lista chat dinamica in Vue.js -->
                 <div id="list_chat">
-                    <div v-for="(contact, index) in contacts" class="single_chat d-flex py-2 px-2" :class="{active_chat: index === activeIndex}" @click="setActiveIndex(index)">
+                    <div v-for="(contact, index) in contacts" v-if="filteredList(index)" class="single_chat d-flex py-2 px-2" :class="{active_chat: index === activeIndex}" @click="setActiveIndex(index)">
                         <div class="avatar_user">
                             <img :src="getFullPathImage(index)" alt="User Avatar">
                         </div>
