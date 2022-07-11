@@ -12,6 +12,8 @@ const app = new Vue(
 
             searchBar: "",
 
+            dateLastAccess: "",
+
             contacts: [
                 {
                     name: 'Michele',
@@ -192,7 +194,7 @@ const app = new Vue(
                 } else {
                     this.contacts[this.activeIndex].messages.push(
                         {
-                            date: '08/07/2022 18:00:00',
+                            date: '08/07/2022 12:45:00',
                             message: currentMessage,
                             status: 'sent'
                         }
@@ -202,7 +204,7 @@ const app = new Vue(
                     setTimeout(()=>{
                         this.contacts[this.activeIndex].messages.push(
                             {
-                                date: '08/07/2022 18:00:03',
+                                date: '08/07/2022 12:45:00',
                                 message: this.newReceivedMessage,
                                 status : 'received'
                             }
@@ -215,6 +217,18 @@ const app = new Vue(
                 let contactName = this.contacts[index].name.toLowerCase();
                 let nameSearched = this.searchBar.toLowerCase();
                 return (contactName.startsWith(nameSearched));
+            },
+
+            getTime: function (date) {
+                const dateArray = date.split(" ");
+                const timeSplitted = dateArray[1].split(':');
+                const hours = timeSplitted[0] + ':' + timeSplitted[1];
+                return hours;
+            },
+
+            getDate: function (date) {
+                const dateArray = date.split(" ");
+                return dateArray[0];
             },
             
         },
