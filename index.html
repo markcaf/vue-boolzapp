@@ -110,9 +110,10 @@
                 <div id="chat_wrapper">
                     <div class="container">
                         <div class="row pt-4 wrapper_messages d-flex flex-column">
-                            <div v-for="(singleMessage) in contacts[activeIndex].messages" :class="(singleMessage.status == 'sent') ? 'user_message' : 'chat_message'" class="col-4 d-flex justify-content-between">
+                            <div v-for="(singleMessage) in contacts[activeIndex].messages" :class="(singleMessage.status == 'sent') ? 'user_message' : 'chat_message'" class="col-4 d-flex justify-content-between position-relative">
                                 <div class="text">{{singleMessage.message}}</div>
                                 <div class="time">{{ getTime(singleMessage.date) }}</div>
+                                <i class="fa-solid fa-chevron-down position-absolute"></i>
                             </div>
                         </div>
                     </div>
