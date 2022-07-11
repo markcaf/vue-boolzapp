@@ -210,20 +210,9 @@ body{
 
 #chat_wrapper .time{
     position: relative;
-    top: 15px;
-    left: 30px;
+    top: 10px;
+    align-self: flex-end;
 }
-
-#chat_wrapper div.chat_message .time{
-    left: 90px;
-}
-
-#chat_wrapper .dropdown-toggle{
-    color: black;
-    position: relative;
-    bottom: 10px;
-}
-
 
 /* Bottom con input per invio messaggi */
 #chat_bottom{
